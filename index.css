@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* EnviroCorp 2070 Design System - Futuristic Climate Control Interface */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core Space Background */
+    --space-deep: 222 84% 4%;
+    --space-void: 240 100% 2%;
+    --space-nebula: 260 70% 8%;
+    
+    /* Neon Accent Palette */
+    --neon-cyan: 180 100% 70%;
+    --neon-teal: 170 85% 65%;
+    --neon-violet: 280 90% 75%;
+    --neon-gold: 45 100% 70%;
+    --neon-emerald: 140 80% 60%;
+    
+    /* Glass & Hologram */
+    --glass-base: 0 0% 100%;
+    --glass-surface: 220 20% 95%;
+    --glass-border: 220 30% 85%;
+    --holo-blue: 200 100% 80%;
+    --holo-cyan: 180 100% 85%;
+    
+    /* Text & Interface */
+    --text-primary: 0 0% 98%;
+    --text-secondary: 220 15% 75%;
+    --text-muted: 220 10% 55%;
+    --text-inverse: 222 84% 4%;
+    
+    /* Status Colors */
+    --success-glow: 140 80% 60%;
+    --warning-glow: 40 100% 65%;
+    --error-glow: 0 85% 65%;
+    --info-glow: 200 100% 70%;
+    
+    /* Gradients */
+    --gradient-space: linear-gradient(135deg, hsl(var(--space-deep)), hsl(var(--space-nebula)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-violet)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--neon-gold)), hsl(45 90% 60%));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--glass-base) / 0.1), hsl(var(--glass-surface) / 0.05));
+    --gradient-holo: linear-gradient(45deg, hsl(var(--holo-blue) / 0.3), hsl(var(--holo-cyan) / 0.2));
+    
+    /* Shadows & Glows */
+    --glow-cyan: 0 0 20px hsl(var(--neon-cyan) / 0.5), 0 0 40px hsl(var(--neon-cyan) / 0.3);
+    --glow-violet: 0 0 20px hsl(var(--neon-violet) / 0.5), 0 0 40px hsl(var(--neon-violet) / 0.3);
+    --glow-gold: 0 0 20px hsl(var(--neon-gold) / 0.5), 0 0 40px hsl(var(--neon-gold) / 0.3);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.1);
+    --shadow-deep: 0 25px 50px hsl(0 0% 0% / 0.5);
+    
+    /* Semantic Mapping */
+    --background: var(--space-deep);
+    --foreground: var(--text-primary);
+    --card: var(--space-nebula);
+    --card-foreground: var(--text-primary);
+    --popover: var(--space-nebula);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--neon-cyan);
+    --primary-foreground: var(--text-inverse);
+    --secondary: var(--glass-surface);
+    --secondary-foreground: var(--text-inverse);
+    --muted: var(--space-nebula);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--neon-violet);
+    --accent-foreground: var(--text-inverse);
+    --destructive: var(--error-glow);
+    --destructive-foreground: var(--text-primary);
+    --border: var(--glass-border);
+    --input: var(--space-nebula);
+    --ring: var(--neon-cyan);
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-space);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+  }
+  
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
